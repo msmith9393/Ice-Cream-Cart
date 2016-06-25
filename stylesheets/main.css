@@ -1,6 +1,87 @@
-.container {
-  width: 500px;
-  border: 5px solid red;
-  color: #EEE; }
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.sc-header-container {
+  width: 100%;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  border: 1px solid red; }
+  .sc-header-container .sc-title-container {
+    width: 60%;
+    margin: 0 auto; }
+    .sc-header-container .sc-title-container .sc-title {
+      font-family: "Open Sans", "Arial", sans-serif;
+      font-size: 2rem;
+      font-weight: 300;
+      position: relative; }
+      .sc-header-container .sc-title-container .sc-title .sc-bracket1, .sc-header-container .sc-title-container .sc-title .sc-bracket2 {
+        color: #62DEBE; }
+      .sc-header-container .sc-title-container .sc-title .sc-bracket2 {
+        background: #fff;
+        padding-right: 150px;
+        position: absolute;
+        left: 230px;
+        -webkit-transition: all .2s linear;
+        -moz-transition: all .2s linear;
+        -ms-transition: all .2s linear;
+        -o-transition: all .2s linear;
+        transition: all .2s linear; }
+      .sc-header-container .sc-title-container .sc-title:hover .sc-bracket2 {
+        left: 360px; }
+      .sc-header-container .sc-title-container .sc-title a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        letter-spacing: 1.5px;
+        color: black;
+        padding: 10px;
+        -webkit-transition: color .2s linear;
+        -moz-transition: color .2s linear;
+        -ms-transition: color .2s linear;
+        -o-transition: color .2s linear;
+        transition: color .2s linear; }
+        .sc-header-container .sc-title-container .sc-title a:hover {
+          color: #62DEBE; }
 
 /*# sourceMappingURL=main.css.map */

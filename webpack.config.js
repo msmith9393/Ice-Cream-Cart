@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   entry: [
     'webpack-hot-middleware/client',
     './client/index.js'
@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ["style", "css?sourceMap", "sass?sourceMap"]
+        loaders: ["style", "css", "sass"]
       },
       { test: /\.css$/, loader: "style-loader!css-loader" }
     ]

@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-require('./../stylesheets/main.scss');
+import React, { Component } from 'react';
+import Header from './header.js';
 
 class App extends Component {
 
   render() {
     return (
       <div>
-        <h1 className="container">Hello React!</h1>
+        <Header />
       </div>
     )
   }
