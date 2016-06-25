@@ -1,0 +1,1 @@
+export const GET_ALL_FLAVORS = 'GET_ALL_FLAVORS';

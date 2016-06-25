@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-require('./../stylesheets/main.css');
+require('./../../stylesheets/main.css');
 
 class Header extends Component {
 
