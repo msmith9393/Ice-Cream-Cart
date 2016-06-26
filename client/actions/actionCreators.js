@@ -4,15 +4,36 @@ export default {
   getAllFlavors: (flavors) => {
     return {
       type: types.GET_ALL_FLAVORS,
-      flavors: flavors
+      flavors
     }
   },
-  addToCart: (flavors, index) => {
+  addToCart: (flavors, index, currentTotal) => {
     return {
       type: types.ADD_TO_CART,
       payload: {
         index,
-        flavors
+        flavors,
+        currentTotal
+      }
+    }
+  },
+  removeFromCart: (flavors, index, currentTotal) => {
+    return {
+      type: types.REMOVE_FROM_CART,
+      payload: {
+        index,
+        flavors,
+        currentTotal
+      }
+    }
+  },
+  removeProduct: (flavors, index, currentTotal) => {
+    return {
+      type: types.REMOVE_PRODUCT,
+      payload: {
+        index,
+        flavors,
+        currentTotal
       }
     }
   }

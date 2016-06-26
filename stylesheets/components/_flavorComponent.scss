@@ -3,9 +3,40 @@
   height: 200px;
   margin: 30px auto;
   display: flex;
-  img {
-    box-shadow: 2px 2px 2px #888;
+  .sc-remove {
+    position: relative;
+    cursor: pointer;
+    img {
+      box-shadow: 2px 2px 2px #888;
+    }
+    .sc-remove-product {
+      font-family: $font-family;
+      background-color: $teal;
+      color: white;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      bottom: 0;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden;
+      -webkit-transition: bottom .2s linear;
+      -moz-transition: bottom .2s linear;
+      -ms-transition: bottom .2s linear;
+      -o-transition: bottom .2s linear;
+      transition: bottom .2s linear;
+    }
+    &:hover .sc-remove-product {
+      bottom: 40%;
+      visibility: visible;
+    }
   }
+  .remove {
+  	cursor: pointer;
+  }
+
   .sc-side {
     width: 100%;
     margin-left: 10px;
@@ -50,6 +81,12 @@
   align-items: center;
   div {
     padding: 18px 25px;
+  }
+  .minus {
+    cursor: pointer;
+  }
+  .plus {
+    cursor: pointer;
   }
 }
 

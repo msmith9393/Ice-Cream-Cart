@@ -1,4 +1,32 @@
 .sc-footer-container {
-  width: 100%;
+  width: 80%;
   height: 125px;
+  margin: 30px auto;
+  display: flex;
+  font-family: $font-family;
+  font-weight: 300;
+  font-size: 24px;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 2;
+  .taxes {
+    font-size: 14px;
+  }
+  .total {
+    text-align: center;
+    .price {
+      background: #eee;
+      border-bottom: 2px solid #888;
+      margin-bottom: 5px;
+    }
+    .checkout {
+      background-color: $teal;
+      color: white;
+      padding: 5px 60px;
+      cursor: pointer;
+      &:hover {
+        background-color: darken($teal, 20%);
+      }
+    }
+  }
 }

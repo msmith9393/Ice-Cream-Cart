@@ -11,24 +11,23 @@ class AddToCartBar extends Component {
 
   handleClick(action) {
     if (action === 'add') {
-      this.props.actions.addToCart(this.props.flavors, this.props.index);
+      this.props.actions.addToCart(this.props.state.flavors, this.props.index, this.props.state.total);
     } else {
-
+      this.props.actions.removeFromCart(this.props.state.flavors, this.props.index, this.props.state.total);
     }
   }
 
   render() {
-    console.log('HELLO', this.props.flavors);
     return (
       <div className="sc-addToCartBar-container">
         <div className="calculator">
           <div onClick={this.handleClick.bind(this, 'minus')} className="minus">-</div>
-          <div className="num">{this.props.flavors[this.props.index].numberScoopsInCart}</div>
+          <div className="num">{this.props.state.flavors[this.props.index].numberScoopsInCart}</div>
           <div onClick={this.handleClick.bind(this, 'add')} className="plus">+</div>
         </div>
         <div className="equals">
-          <div className="price-per-unit">${this.props.flavors[this.props.index].price}.00</div>
-          <div className="total-price">${this.props.flavors[this.props.index].totalPrice}.00</div>
+          <div className="price-per-unit">${this.props.state.flavors[this.props.index].price}.00</div>
+          <div className="total-price">${this.props.state.flavors[this.props.index].totalPrice}.00</div>
         </div>
       </div>
     )

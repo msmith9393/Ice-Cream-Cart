@@ -10,9 +10,9 @@ class MainBody extends Component {
   render() {
     return (
       <div className="sc-body-container">
-        {this.props.flavors.map((flavor, index) => {
+        {this.props.state.flavors.map((flavor, index) => {
           return (
-            <FlavorComponent key={index} index={index} flavor={flavor} />
+            <FlavorComponent key={index} index={index} />
           )
         })}
       </div>

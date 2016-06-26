@@ -12,8 +12,10 @@
       font-size: 2rem;
       font-weight: 300;
       position: relative;
+      cursor: pointer;
       .sc-bracket1 {
         color: $teal;
+        cursor: pointer;
       }
       .sc-bracket2 {
         @extend .sc-bracket1;

@@ -13,48 +13,51 @@ const finalCreateStore = compose(
 
 let getRandomPrice = () => Math.ceil(Math.random() * 5);
 
-var flavors = [
-  {
-    name: 'Vanilla',
-    price: getRandomPrice(),
-    numberScoopsLeft: 10,
-    numberScoopsInCart: 0,
-    totalPrice: 0
-  },
-  {
-    name: 'Strawberry',
-    price: getRandomPrice(),
-    numberScoopsLeft: 10,
-    numberScoopsInCart: 0,
-    totalPrice: 0
-  },
-  {
-    name: 'Coffee',
-    price: getRandomPrice(),
-    numberScoopsLeft: 10,
-    numberScoopsInCart: 0,
-    totalPrice: 0
-  },
-  {
-    name: 'Chocolate',
-    price: getRandomPrice(),
-    numberScoopsLeft: 10,
-    numberScoopsInCart: 0,
-    totalPrice: 0
-  },
-  {
-    name: 'Mint',
-    price: getRandomPrice(),
-    numberScoopsLeft: 10,
-    numberScoopsInCart: 0,
-    totalPrice: 0
-  },
-];
+var state = {
+  total: 0,
+  flavors: [
+    {
+      name: 'Vanilla',
+      price: getRandomPrice(),
+      numberScoopsLeft: 10,
+      numberScoopsInCart: 0,
+      totalPrice: 0
+    },
+    {
+      name: 'Strawberry',
+      price: getRandomPrice(),
+      numberScoopsLeft: 10,
+      numberScoopsInCart: 0,
+      totalPrice: 0
+    },
+    {
+      name: 'Coffee',
+      price: getRandomPrice(),
+      numberScoopsLeft: 10,
+      numberScoopsInCart: 0,
+      totalPrice: 0
+    },
+    {
+      name: 'Chocolate',
+      price: getRandomPrice(),
+      numberScoopsLeft: 10,
+      numberScoopsInCart: 0,
+      totalPrice: 0
+    },
+    {
+      name: 'Mint',
+      price: getRandomPrice(),
+      numberScoopsLeft: 10,
+      numberScoopsInCart: 0,
+      totalPrice: 0
+    }
+  ]
+}
 
 const store = finalCreateStore(reducer,
   window.devToolsExtension ? window.devToolsExtension() : undefined);
 
-store.dispatch(actions.getAllFlavors(flavors));
+store.dispatch(actions.getAllFlavors(state));
 
 render(
   <Provider store={store}>
