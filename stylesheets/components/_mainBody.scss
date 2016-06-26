@@ -2,4 +2,9 @@
   background-color: $color-grey;
   padding: 20px;
   width: 100%;
+  p {
+    text-align: center;
+    font-family: $font-family;
+    font-size: 16px;
+  }
 }

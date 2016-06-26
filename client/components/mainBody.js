@@ -8,15 +8,23 @@ require('./../../stylesheets/main.css');
 class MainBody extends Component {
 
   render() {
-    return (
-      <div className="sc-body-container">
+    if (this.props.state.flavors.length) {
+      return (
+        <div className="sc-body-container">
         {this.props.state.flavors.map((flavor, index) => {
           return (
             <FlavorComponent key={index} index={index} />
           )
         })}
-      </div>
-    )
+        </div>
+      )
+    } else {
+      return (
+        <div className="sc-body-container">
+          <p>You have no more items in your cart. Go add more items to your cart!</p>
+        </div>
+      )
+    }
   }
 
 }

@@ -7,18 +7,22 @@ require('./../../stylesheets/main.css');
 class Footer extends Component {
 
   render() {
-    return (
-      <div className="sc-footer-container">
+    if (this.props.state.flavors.length) {
+      return (
+        <div className="sc-footer-container">
         <div className="subtotal">
-          <h3>Subtotal: ${this.props.state.total}.00</h3>
-          <p className="taxes">Taxes (8.5%): ${(this.props.state.total * 0.085).toFixed(2)}</p>
+        <h3>Subtotal: ${this.props.state.total}.00</h3>
+        <p className="taxes">Taxes (8.5%): ${(this.props.state.total * 0.085).toFixed(2)}</p>
         </div>
         <div className="total">
-          <h2 className="price">${(Number(this.props.state.total) + Number(this.props.state.total * 0.085)).toFixed(2)}</h2>
-          <div className="checkout">Checkout</div>
+        <h2 className="price">${(Number(this.props.state.total) + Number(this.props.state.total * 0.085)).toFixed(2)}</h2>
+        <div className="checkout">Checkout</div>
         </div>
-      </div>
-    )
+        </div>
+      )
+    } else {
+      return null;
+    }
   }
 
 }

@@ -11,48 +11,58 @@ const finalCreateStore = compose(
   applyMiddleware(...middleware)
 )(createStore);
 
-let getRandomPrice = () => Math.ceil(Math.random() * 5);
-
 var state = {
   total: 0,
   flavors: [
     {
       name: 'Vanilla',
-      price: getRandomPrice(),
-      numberScoopsLeft: 10,
-      numberScoopsInCart: 0,
-      totalPrice: 0
+      price: null,
+      numberScoopsLeft: 9,
+      numberScoopsInCart: 1,
+      totalPrice: null
     },
     {
       name: 'Strawberry',
-      price: getRandomPrice(),
-      numberScoopsLeft: 10,
-      numberScoopsInCart: 0,
-      totalPrice: 0
+      price: null,
+      numberScoopsLeft: 9,
+      numberScoopsInCart: 1,
+      totalPrice: null
     },
     {
       name: 'Coffee',
-      price: getRandomPrice(),
-      numberScoopsLeft: 10,
-      numberScoopsInCart: 0,
-      totalPrice: 0
+      price: null,
+      numberScoopsLeft: 9,
+      numberScoopsInCart: 1,
+      totalPrice: null
     },
     {
       name: 'Chocolate',
-      price: getRandomPrice(),
-      numberScoopsLeft: 10,
-      numberScoopsInCart: 0,
-      totalPrice: 0
+      price: null,
+      numberScoopsLeft: 9,
+      numberScoopsInCart: 1,
+      totalPrice: null
     },
     {
       name: 'Mint',
-      price: getRandomPrice(),
-      numberScoopsLeft: 10,
-      numberScoopsInCart: 0,
-      totalPrice: 0
+      price: null,
+      numberScoopsLeft: 9,
+      numberScoopsInCart: 1,
+      totalPrice: null
     }
   ]
 }
+
+let getRandomPrice = () => Math.ceil(Math.random() * 5);
+var copy = state.flavors.slice();
+var total = state.total;
+state.flavors = copy.map((flavor) => {
+  var random = getRandomPrice();
+  flavor.price = random;
+  flavor.totalPrice = random;
+  total += random;
+  return flavor;
+});
+state.total = total;
 
 const store = finalCreateStore(reducer,
   window.devToolsExtension ? window.devToolsExtension() : undefined);
