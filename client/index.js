@@ -17,31 +17,37 @@ var flavors = [
   {
     name: 'Vanilla',
     price: getRandomPrice(),
-    numberScoops: 10
+    numberScoopsLeft: 10,
+    numberScoopsInCart: 0,
+    totalPrice: 0
   },
   {
     name: 'Strawberry',
     price: getRandomPrice(),
     numberScoopsLeft: 10,
-    numberScoopsInCart: 0
+    numberScoopsInCart: 0,
+    totalPrice: 0
   },
   {
     name: 'Coffee',
     price: getRandomPrice(),
     numberScoopsLeft: 10,
-    numberScoopsInCart: 0
+    numberScoopsInCart: 0,
+    totalPrice: 0
   },
   {
     name: 'Chocolate',
     price: getRandomPrice(),
     numberScoopsLeft: 10,
-    numberScoopsInCart: 0
+    numberScoopsInCart: 0,
+    totalPrice: 0
   },
   {
     name: 'Mint',
     price: getRandomPrice(),
     numberScoopsLeft: 10,
-    numberScoopsInCart: 0
+    numberScoopsInCart: 0,
+    totalPrice: 0
   },
 ];
 

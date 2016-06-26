@@ -2,5 +2,73 @@
   width: 80%;
   height: 200px;
   margin: 30px auto;
-  border: 1px solid green;
+  display: flex;
+  img {
+    box-shadow: 2px 2px 2px #888;
+  }
+  .sc-side {
+    width: 100%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: $font-family;
+  }
+}
+
+.sc-flavor-description {
+  background: white;
+  box-shadow: 2px 2px 2px #888;
+  height: 60%;
+  h4 {
+    font-size: 2rem;
+    padding: 15px 10px;
+    letter-spacing: 1px;
+    color: $teal;
+    font-weight: 300;
+  }
+  p {
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.sc-addToCartBar-container {
+  font-weight: 300;
+  font-size: 24px;
+  background: white;
+  box-shadow: 2px 2px 2px #888;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    padding: 18px 25px;
+  }
+}
+
+.equals {
+  @extend .calculator;
+  .price-per-unit {
+    background: $color-grey;
+  }
+}
+
+.minus:hover {
+  background-color: $teal;
+  color: white;
+}
+
+.plus:hover {
+  @extend .minus:hover;
+}
+
+.total-price {
+  @extend .minus:hover;
 }
