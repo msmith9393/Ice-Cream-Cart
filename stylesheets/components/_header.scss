@@ -1,11 +1,12 @@
 .sc-header-container {
   width: 100%;
+  position: relative;
   height: 125px;
   display: flex;
   align-items: center;
   border: 1px solid red;
   .sc-title-container {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     .sc-title {
       font-family: $font-family;

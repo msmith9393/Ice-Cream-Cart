@@ -20,7 +20,7 @@ var flavors = [
     numberScoops: 10
   },
   {
-    name: 'Pistachio',
+    name: 'Strawberry',
     price: getRandomPrice(),
     numberScoopsLeft: 10,
     numberScoopsInCart: 0

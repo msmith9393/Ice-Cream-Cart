@@ -6,9 +6,9 @@ class FlavorComponent extends Component {
     super(props);
   }
   render() {
-    console.log(this.props.index);
     return (
       <div className="sc-flavor-container">
+        <img src='/static/assets/Vanilla.jpg' />
         {this.props.flavor.name}
       </div>
     )

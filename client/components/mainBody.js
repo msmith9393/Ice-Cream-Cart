@@ -8,7 +8,6 @@ require('./../../stylesheets/main.css');
 class MainBody extends Component {
 
   render() {
-    console.log('PROPS', this.props);
     return (
       <div className="sc-body-container">
         {this.props.flavors.map((flavor, index) => {
