@@ -19,35 +19,40 @@ var state = {
       price: null,
       numberScoopsLeft: 9,
       numberScoopsInCart: 1,
-      totalPrice: null
+      totalPrice: null,
+      description: 'Temporary description about ice cream flavor. I am going to make it extra long.'
     },
     {
       name: 'Strawberry',
       price: null,
       numberScoopsLeft: 9,
       numberScoopsInCart: 1,
-      totalPrice: null
+      totalPrice: null,
+      description: 'Temporary description about ice cream flavor. I am going to make it extra long.'
     },
     {
       name: 'Coffee',
       price: null,
       numberScoopsLeft: 9,
       numberScoopsInCart: 1,
-      totalPrice: null
+      totalPrice: null,
+      description: 'Temporary description about ice cream flavor. I am going to make it extra long.'
     },
     {
       name: 'Chocolate',
       price: null,
       numberScoopsLeft: 9,
       numberScoopsInCart: 1,
-      totalPrice: null
+      totalPrice: null,
+      description: 'Temporary description about ice cream flavor. I am going to make it extra long.'
     },
     {
       name: 'Mint',
       price: null,
       numberScoopsLeft: 9,
       numberScoopsInCart: 1,
-      totalPrice: null
+      totalPrice: null,
+      description: 'Temporary description about ice cream flavor. I am going to make it extra long.'
     }
   ]
 }

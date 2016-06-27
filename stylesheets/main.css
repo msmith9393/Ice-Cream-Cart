@@ -204,5 +204,78 @@ table {
       cursor: pointer; }
       .sc-footer-container .total .checkout:hover {
         background-color: #26b48f; }
+  .sc-footer-container .modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none; }
+    .sc-footer-container .modalDialog .modalContainer {
+      width: 400px;
+      position: relative;
+      margin: 20% auto;
+      padding: 20px;
+      border-radius: 10px 0;
+      background: #fff;
+      background: -moz-linear-gradient(#fff, #eee);
+      background: -webkit-linear-gradient(#fff, #eee);
+      background: -o-linear-gradient(#fff, #eee); }
+      .sc-footer-container .modalDialog .modalContainer .close {
+        background: #62DEBE;
+        color: white;
+        line-height: 25px;
+        position: absolute;
+        right: -12px;
+        text-align: center;
+        top: -10px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        text-decoration: none;
+        padding: 5px;
+        -moz-box-shadow: 1px 1px 3px #000;
+        -webkit-box-shadow: 1px 1px 3px #000;
+        box-shadow: 1px 1px 3px;
+        cursor: pointer; }
+        .sc-footer-container .modalDialog .modalContainer .close:hover {
+          background-color: #26b48f; }
+  .sc-footer-container .showModal {
+    opacity: 1;
+    pointer-events: auto; }
+
+.creditcard-checkout {
+  border: 1px solid red; }
+  .creditcard-checkout .flip-container {
+    perspective: 1000; }
+    .creditcard-checkout .flip-container:hover .flipper {
+      transform: rotateY(180deg); }
+    .creditcard-checkout .flip-container .front, .creditcard-checkout .flip-container .back {
+      width: 400px;
+      height: 240px;
+      border-radius: 15px;
+      backface-visibility: hidden;
+      background-color: red;
+      position: absolute;
+      color: #fff;
+      top: 0;
+      left: 0; }
+    .creditcard-checkout .flip-container .back {
+      background-color: green; }
+    .creditcard-checkout .flip-container .flipper {
+      transition: 0.6s;
+      transform-style: preserve-3d;
+      position: relative; }
+    .creditcard-checkout .flip-container .front, .creditcard-checkout .flip-container .back {
+      z-index: 2;
+      transform: rotateY(0deg); }
+    .creditcard-checkout .flip-container .back {
+      transform: rotateY(180deg); }
 
 /*# sourceMappingURL=main.css.map */

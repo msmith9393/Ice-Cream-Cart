@@ -22,7 +22,7 @@ class FlavorComponent extends Component {
         <div className="sc-side">
           <div className="sc-flavor-description">
             <h4>{this.props.state.flavors[this.props.index].name}</h4>
-            <p>Temporary description about ice cream flavor. I am going to make it extra long.</p>
+            <p>{this.props.state.flavors[this.props.index].description}</p>
           </div>
           <AddToCartBar index={this.props.index} />
         </div>
