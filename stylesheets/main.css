@@ -140,7 +140,9 @@ table {
   .sc-flavor-description p {
     padding: 5px 10px;
     font-size: 14px;
-    line-height: 22px; }
+    line-height: 22px;
+    display: flex;
+    justify-content: flex-start; }
 
 .sc-addToCartBar-container {
   font-weight: 300;
@@ -250,32 +252,99 @@ table {
     opacity: 1;
     pointer-events: auto; }
 
-.creditcard-checkout {
-  border: 1px solid red; }
-  .creditcard-checkout .flip-container {
-    perspective: 1000; }
-    .creditcard-checkout .flip-container:hover .flipper {
-      transform: rotateY(180deg); }
-    .creditcard-checkout .flip-container .front, .creditcard-checkout .flip-container .back {
-      width: 400px;
-      height: 240px;
-      border-radius: 15px;
-      backface-visibility: hidden;
-      background-color: red;
+.creditcard-checkout .flip-container {
+  perspective: 1000; }
+  .creditcard-checkout .flip-container:hover .flipper {
+    transform: rotateY(180deg); }
+  .creditcard-checkout .flip-container .front, .creditcard-checkout .flip-container .back {
+    width: 400px;
+    height: 240px;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    background-color: #06C;
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0; }
+    .creditcard-checkout .flip-container .front .number, .creditcard-checkout .flip-container .back .number {
+      padding-left: 10px; }
+    .creditcard-checkout .flip-container .front .card-holder, .creditcard-checkout .flip-container .back .card-holder {
+      padding-left: 10px; }
+    .creditcard-checkout .flip-container .front .card-expiration-date, .creditcard-checkout .flip-container .back .card-expiration-date {
+      padding-left: 10px; }
+  .creditcard-checkout .flip-container .back {
+    background-color: #EEE; }
+    .creditcard-checkout .flip-container .back .strip {
       position: absolute;
-      color: #fff;
-      top: 0;
-      left: 0; }
-    .creditcard-checkout .flip-container .back {
-      background-color: green; }
-    .creditcard-checkout .flip-container .flipper {
-      transition: 0.6s;
-      transform-style: preserve-3d;
-      position: relative; }
-    .creditcard-checkout .flip-container .front, .creditcard-checkout .flip-container .back {
-      z-index: 2;
-      transform: rotateY(0deg); }
-    .creditcard-checkout .flip-container .back {
-      transform: rotateY(180deg); }
+      background-color: black;
+      height: 40px;
+      width: 100%;
+      top: 50px; }
+    .creditcard-checkout .flip-container .back .ccv {
+      position: absolute;
+      padding-left: 10px;
+      bottom: 20px;
+      color: black; }
+  .creditcard-checkout .flip-container .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative; }
+  .creditcard-checkout .flip-container .front, .creditcard-checkout .flip-container .back {
+    z-index: 2;
+    transform: rotateY(0deg); }
+  .creditcard-checkout .flip-container .back {
+    transform: rotateY(180deg); }
+
+.form {
+  position: relative;
+  font-size: 14px;
+  top: 280px;
+  padding-bottom: 250px; }
+  .form label {
+    float: left;
+    margin-right: 15px;
+    width: 100%;
+    color: #60debd;
+    font-weight: bold; }
+  .form input {
+    border-radius: 5px;
+    height: 20px;
+    border: none;
+    margin: 5px; }
+  .form .cc-number {
+    width: 100%; }
+    .form .cc-number .input-card-number {
+      width: 21%;
+      margin: 7px; }
+  .form .card-holder {
+    width: 100%; }
+    .form .card-holder input {
+      width: 95%; }
+  .form .thirdRow {
+    position: relative; }
+    .form .thirdRow .expiration {
+      float: left; }
+      .form .thirdRow .expiration .select {
+        display: inline-block; }
+        .form .thirdRow .expiration .select :first-child {
+          margin-right: 10px; }
+  .form .checkout-btn {
+    clear: both;
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    font-size: 14px;
+    line-height: 0px;
+    height: 20px;
+    padding: 20px;
+    vertical-align: middle;
+    background: #62DEBE;
+    color: white;
+    border: none; }
+    .form .checkout-btn:hover {
+      background-color: #26b48f; }
+
+.trigger-flip {
+  transform: rotateY(180deg); }
 
 /*# sourceMappingURL=main.css.map */

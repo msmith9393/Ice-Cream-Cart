@@ -36,5 +36,11 @@ export default {
         currentTotal
       }
     }
+  },
+  getCreditCardInfo: (creditCardInfo) => {
+    return {
+      type: types.GET_CREDITCARD_INFO,
+      payload: creditCardInfo
+    }
   }
 }

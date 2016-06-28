@@ -29,8 +29,11 @@ class Footer extends Component {
           <div id="openModal" className="modalDialog">
             <div className="modalContainer">
               <a onClick={this.handleModal.bind(this, 'close')} className="close">X</a>
-              <h2>Modal Box</h2>
-              <p>This is a sample modal box</p>
+              {!this.props.creditCardInfo.submitted ?
+                <div>
+                  <p>Please pay with credit card</p>
+                  <p>Your total today is ${(Number(this.props.state.total) + Number(this.props.state.total * 0.085)).toFixed(2)}</p>
+                </div>: null}
               <Checkout />
             </div>
           </div>
