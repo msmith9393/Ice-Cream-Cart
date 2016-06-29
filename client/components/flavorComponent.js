@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import actions from './../actions/actionCreators';
-import AddToCartBar from './AddToCartBar.js';
+import AddToCartBar from './addToCartBar.js';
 require('./../../stylesheets/main.css');
 
 class FlavorComponent extends Component {
